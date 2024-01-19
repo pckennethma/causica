@@ -68,11 +68,19 @@ def edge_prediction_metrics(
     assert ((adj_matrix_predicted == 0) | (adj_matrix_predicted == 1)).all()
     results = {}
 
+    # print(
+    #     (
+    #         f"adj_matrix_true: {adj_matrix_true.shape}\n"
+    #         f"adj_matrix_predicted: {adj_matrix_predicted.shape}\n"
+    #         f"adj_matrix_mask: {adj_matrix_mask.shape}"
+    #     )
+    # )
     # Computing adjacency precision/recall
     v_mask = is_there_adjacency(adj_matrix_mask)
     # v_mask is true only if we know about at least one direction of the edge
     v_true = is_there_adjacency(adj_matrix_true) & v_mask
     v_predicted = is_there_adjacency(adj_matrix_predicted) & v_mask
+
     recall = (v_true & v_predicted).sum() / (v_true.sum())
     precision = (v_true & v_predicted).sum() / (v_predicted.sum()) if v_predicted.sum() != 0 else 0.0
     fscore = 2 * recall * precision / (precision + recall) if (recall + precision) != 0 else 0.0

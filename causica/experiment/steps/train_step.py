@@ -22,7 +22,7 @@ def run_train_main(
     prior_path: Optional[str] = None,
     constraint_path: Optional[str] = None,
 ) -> IModel:
-
+    logger.info(f"Variable info: {dataset.variables.to_dict()}")
     # Create model
     logger.info("Creating new model")
     model = create_model(model_type, output_dir, variables, device, model_config)

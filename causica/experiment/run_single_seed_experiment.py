@@ -187,12 +187,12 @@ def run_single_seed_experiment(args: ExperimentArguments):
         eval_causal_discovery(dataset, causal_model, disable_diagonal_eval=args.disable_diagonal_eval)
 
     # Treatment effect estimation
-    if args.treatment_effects:
-        if not isinstance(model, IModelForCausalInference):
-            raise ValueError("This model class does not support treatment effect estimation.")
-        if not isinstance(dataset, CausalDataset):
-            raise ValueError("This dataset type does not support treatment effect estimation.")
-        evaluate_treatment_effect_estimation(model, dataset, logger, args.eval_likelihood)
+    # if args.treatment_effects:
+    #     if not isinstance(model, IModelForCausalInference):
+    #         raise ValueError("This model class does not support treatment effect estimation.")
+    #     if not isinstance(dataset, CausalDataset):
+    #         raise ValueError("This dataset type does not support treatment effect estimation.")
+    #     evaluate_treatment_effect_estimation(model, dataset, logger, args.eval_likelihood)
 
     # Log speed/system metrics
     system_metrics = system_metrics_logger.end_log()

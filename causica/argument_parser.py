@@ -296,7 +296,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output_dir", "-o", type=str, default="runs", help="Output path. Defaults to ./runs/.")
     parser.add_argument("--name", "-n", type=str, help="Tag for this run. Output dir will start with this tag.")
     parser.add_argument(
-        "--device", "-dv", default="cpu", help="Name (e.g. 'cpu', 'gpu') or ID (e.g. 0 or 1) of device to use."
+        "--device", "-dv", default="gpu", help="Name (e.g. 'cpu', 'gpu') or ID (e.g. 0 or 1) of device to use."
     )
     parser.add_argument("--tiny", action="store_true", help="Use this flag to do a tiny run for debugging")
     parser.add_argument(

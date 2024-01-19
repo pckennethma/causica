@@ -81,17 +81,17 @@ class DataProcessor:
                 self._cts_unproc_regions = [[col_id] for col_id in unproc_cols_by_type["continuous"]]
                 self._cts_proc_regions = proc_cols_by_type["continuous"]
             assert len(self._cts_unproc_regions) == len(self._cts_proc_regions)
-            if unit_scale_continuous:
-                self._cts_normalizers = [
-                    UnitScaler(variables[i] for i in unproc_region) for unproc_region in self._cts_unproc_regions
-                ]
-            elif standardize_data_mean or standardize_data_std:
-                self._cts_normalizers = [
-                    StandardScaler(with_mean=standardize_data_mean, with_std=standardize_data_std)
-                    for _ in self._cts_unproc_regions
-                ]
-            else:
-                self._cts_normalizers = [IdentityTransform()] * len(self._cts_unproc_regions)
+            # if unit_scale_continuous:
+            #     self._cts_normalizers = [
+            #         UnitScaler(variables[i] for i in unproc_region) for unproc_region in self._cts_unproc_regions
+            #     ]
+            # elif standardize_data_mean or standardize_data_std:
+            #     self._cts_normalizers = [
+            #         StandardScaler(with_mean=standardize_data_mean, with_std=standardize_data_std)
+            #         for _ in self._cts_unproc_regions
+            #     ]
+            # else:
+            self._cts_normalizers = [IdentityTransform()] * len(self._cts_unproc_regions)
         else:
             self._cts_unproc_cols, self._cts_proc_cols, self._cts_normalizers = [], [], []
 

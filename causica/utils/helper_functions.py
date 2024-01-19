@@ -32,8 +32,12 @@ def convert_dict_of_ndarray_to_lists(dict_):
 def to_tensors(
     *arrays: Union[torch.Tensor, np.ndarray], device: torch.device, dtype: torch.dtype = torch.float
 ) -> Tuple[torch.Tensor, ...]:
-    return tuple(torch.as_tensor(array, dtype=dtype, device=device) for array in arrays)
-
+    converted_arrays = []
+    for array in arrays:
+        if isinstance(array, np.ndarray) and not array.flags.writeable:
+            array = array.copy()
+        converted_arrays.append(torch.as_tensor(array, dtype=dtype, device=device))
+    return tuple(converted_arrays)
 
 @contextmanager
 def maintain_random_state(do_maintain=True):

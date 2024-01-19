@@ -79,7 +79,7 @@ def run_experiment(
     latent_confounded_causal_discovery: bool = False,
     treatment_effects: bool = False,
     output_dir: str = "runs",
-    device: str = "cpu",
+    device: str = "cuda",
     name: Optional[str] = None,
     quiet: bool = False,
     active_learning_users_to_plot: Optional[List[int]] = None,
@@ -291,6 +291,8 @@ def main(user_args):
     parser = get_parser()
     args = parser.parse_args(user_args)
     validate_args(args)
+
+    print(args)
 
     run_context = RunContext()
     run_experiment_on_parsed_args(args, run_context=run_context)
