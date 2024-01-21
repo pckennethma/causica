@@ -1,0 +1,250 @@
+Namespace(data_path=None, prior_path=None, constraint_path=None, data_dir='data', model_type='bowfree_ddeci_gaussian', model_dir=None, model_config='configs/ddeci/bowfree_ddeci_gaussian.json', dataset_config='configs/dataset_config_latent_confounded_causal_dataset.json', impute_config=None, objective_config=None, run_inference=False, extra_eval=False, max_steps=inf, max_al_rows=inf, active_learning=None, users_to_plot=[0], causal_discovery=False, latent_confounded_causal_discovery=True, treatment_effects=True, output_dir='runs', name=None, device='gpu', tiny=False, random_seed=None, default_configs_dir='configs', logger_level='INFO', eval_likelihood=True, conversion_type='full_time', enable_diagonal_eval=True, dataset_name='10_0')
+2024-01-19 14:14:20,182 run_single_seed_experiment.py:122[INFO]Loading data.
+2024-01-19 14:14:20,182 csv_dataset_loader.py:112[INFO]Using a predefined data split to load the dataset.
+2024-01-19 14:14:20,194 dataset_loader.py:86[INFO]Variables info data/10_0/variables.json exists: False.
+Minimum value of variable Column 0 inferred as -3.6520805953972744. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 0 inferred as 3.773052936093237. This can be changed manually in the dataset's variables.json file
+Variable Column 0 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 0 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 0 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 1 inferred as -14.129690111990488. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 1 inferred as 12.471958614026603. This can be changed manually in the dataset's variables.json file
+Variable Column 1 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 1 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 1 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 2 inferred as -6.42564111941364. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 2 inferred as 5.693090333598161. This can be changed manually in the dataset's variables.json file
+Variable Column 2 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 2 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 2 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 3 inferred as -3.62317038413156. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 3 inferred as 3.3105557284043328. This can be changed manually in the dataset's variables.json file
+Variable Column 3 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 3 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 3 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 4 inferred as -7.818681520373923. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 4 inferred as 7.097349070720104. This can be changed manually in the dataset's variables.json file
+Variable Column 4 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 4 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 4 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 5 inferred as -7.338298571620853. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 5 inferred as 8.098049369242009. This can be changed manually in the dataset's variables.json file
+Variable Column 5 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 5 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 5 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 6 inferred as -11.5212280679983. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 6 inferred as 11.714751712637312. This can be changed manually in the dataset's variables.json file
+Variable Column 6 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 6 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 6 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 7 inferred as -3.651809927164398. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 7 inferred as 3.9525494825244216. This can be changed manually in the dataset's variables.json file
+Variable Column 7 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 7 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 7 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 8 inferred as -3.165059445622078. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 8 inferred as 4.549135821453113. This can be changed manually in the dataset's variables.json file
+Variable Column 8 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 8 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 8 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+Minimum value of variable Column 9 inferred as -4.872773932944406. This can be changed manually in the dataset's variables.json file
+Max value of variable Column 9 inferred as 4.926907209131691. This can be changed manually in the dataset's variables.json file
+Variable Column 9 inferred to be a queriable variable. This can be changed manually in the dataset's variables.json file by updating the "query" field.
+Variable Column 9 inferred as not an active learning target variable. This can be changed manually in the dataset's variables.json file by updating the "target" field.
+Variable Column 9 inferred as an always observed target variable. This can be changed manually in the dataset's variables.json file by updating the "always_observed" field.
+2024-01-19 14:14:20,195 latent_confounded_causal_csv_dataset_loader.py:89[INFO]Create confounded causal dataset.
+2024-01-19 14:14:20,195 latent_confounded_causal_csv_dataset_loader.py:114[INFO]Directed adjacency matrix found.
+2024-01-19 14:14:20,196 latent_confounded_causal_csv_dataset_loader.py:128[INFO]Bidirected adjacency matrix found.
+2024-01-19 14:14:20,196 causal_csv_dataset_loader.py:171[INFO]Intervention data not found.
+2024-01-19 14:14:20,196 causal_csv_dataset_loader.py:171[INFO]Intervention data not found.
+2024-01-19 14:14:20,196 train_step.py:25[INFO]Variable info: {'variables': [{'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 0', 'group_name': 'Column 0', 'lower': -3.6520805953972744, 'upper': 3.773052936093237, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 1', 'group_name': 'Column 1', 'lower': -14.129690111990488, 'upper': 12.471958614026603, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 2', 'group_name': 'Column 2', 'lower': -6.42564111941364, 'upper': 5.693090333598161, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 3', 'group_name': 'Column 3', 'lower': -3.62317038413156, 'upper': 3.3105557284043328, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 4', 'group_name': 'Column 4', 'lower': -7.818681520373923, 'upper': 7.097349070720104, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 5', 'group_name': 'Column 5', 'lower': -7.338298571620853, 'upper': 8.098049369242009, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 6', 'group_name': 'Column 6', 'lower': -11.5212280679983, 'upper': 11.714751712637312, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 7', 'group_name': 'Column 7', 'lower': -3.651809927164398, 'upper': 3.9525494825244216, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 8', 'group_name': 'Column 8', 'lower': -3.165059445622078, 'upper': 4.549135821453113, 'always_observed': True, 'is_latent': False}, {'query': True, 'target': False, 'type': 'continuous', 'name': 'Column 9', 'group_name': 'Column 9', 'lower': -4.872773932944406, 'upper': 4.926907209131691, 'always_observed': True, 'is_latent': False}], 'auxiliary_variables': [], 'used_cols': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+2024-01-19 14:14:20,196 train_step.py:27[INFO]Creating new model
+2024-01-19 14:14:20,749 torch_model.py:199[INFO]Model has 197740 trainable parameters.
+2024-01-19 14:14:20,753 models_factory.py:101[INFO]No prior adj matrix is specified.
+2024-01-19 14:14:20,753 models_factory.py:138[INFO]No constraint adj matrix is specified.
+2024-01-19 14:14:20,754 train_step.py:41[INFO]Created model with ID fa4df7fd-9ec8-4ae1-9a25-672914eaa9e6.
+2024-01-19 14:14:20,754 train_step.py:44[INFO]Training model.
+Saving logs to runs/2024-01-19_141420/models/fa4df7fd-9ec8-4ae1-9a25-672914eaa9e6/train_output/summary
+Auglag Step: 0
+Beta Value: 0.2
+LR: 0.001
+Inner Step: 100, loss: 43.68, log p(x|A): -26.11, dag: 6.80192204, log p(A)_sp: -0.27, log q(A): -0.067, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0267, log_p_u: -51.4, log_p_u_weighed: -10.3, log_qu_x: 35.2, log_qu_x_weighed: 7.05
+Inner Step: 200, loss: 24.62, log p(x|A): -16.52, dag: 8.23595675, log p(A)_sp: -0.29, log q(A): -0.068, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0402, log_p_u: -56, log_p_u_weighed: -11.2, log_qu_x: -16.8, log_qu_x_weighed: -3.36
+Inner Step: 300, loss: 20.70, log p(x|A): -15.41, dag: 8.49311688, log p(A)_sp: -0.29, log q(A): -0.068, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0428, log_p_u: -59.2, log_p_u_weighed: -11.8, log_qu_x: -34, log_qu_x_weighed: -6.81
+Inner Step: 400, loss: 17.95, log p(x|A): -14.56, dag: 8.37309265, log p(A)_sp: -0.30, log q(A): -0.067, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0418, log_p_u: -61.7, log_p_u_weighed: -12.3, log_qu_x: -46.1, log_qu_x_weighed: -9.22
+Inner Step: 500, loss: 16.57, log p(x|A): -13.67, dag: 9.92344715, log p(A)_sp: -0.31, log q(A): -0.067, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0558, log_p_u: -63.1, log_p_u_weighed: -12.6, log_qu_x: -50.1, log_qu_x_weighed: -10
+Inner Step: 600, loss: 16.00, log p(x|A): -13.07, dag: 10.09560992, log p(A)_sp: -0.31, log q(A): -0.066, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0594, log_p_u: -63.4, log_p_u_weighed: -12.7, log_qu_x: -50.3, log_qu_x_weighed: -10.1
+Inner Step: 700, loss: 14.89, log p(x|A): -11.77, dag: 10.65154032, log p(A)_sp: -0.32, log q(A): -0.064, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0665, log_p_u: -63.8, log_p_u_weighed: -12.8, log_qu_x: -49.8, log_qu_x_weighed: -9.97
+Inner Step: 800, loss: 14.46, log p(x|A): -11.22, dag: 10.07328110, log p(A)_sp: -0.31, log q(A): -0.063, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.059, log_p_u: -63.9, log_p_u_weighed: -12.8, log_qu_x: -49.2, log_qu_x_weighed: -9.84
+Inner Step: 900, loss: 13.72, log p(x|A): -10.34, dag: 11.15896710, log p(A)_sp: -0.32, log q(A): -0.062, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0693, log_p_u: -63.9, log_p_u_weighed: -12.8, log_qu_x: -48.6, log_qu_x_weighed: -9.73
+Inner Step: 1000, loss: 13.31, log p(x|A): -9.86, dag: 10.57320966, log p(A)_sp: -0.31, log q(A): -0.060, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0631, log_p_u: -64, log_p_u_weighed: -12.8, log_qu_x: -48.3, log_qu_x_weighed: -9.67
+Inner Step: 1100, loss: 12.55, log p(x|A): -8.97, dag: 10.05363292, log p(A)_sp: -0.30, log q(A): -0.059, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.061, log_p_u: -64, log_p_u_weighed: -12.8, log_qu_x: -47.7, log_qu_x_weighed: -9.54
+Inner Step: 1200, loss: 12.35, log p(x|A): -8.65, dag: 9.99617738, log p(A)_sp: -0.30, log q(A): -0.058, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0587, log_p_u: -64.1, log_p_u_weighed: -12.8, log_qu_x: -47.1, log_qu_x_weighed: -9.42
+Inner Step: 1300, loss: 11.78, log p(x|A): -8.02, dag: 10.65128134, log p(A)_sp: -0.30, log q(A): -0.057, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0645, log_p_u: -64.2, log_p_u_weighed: -12.8, log_qu_x: -47, log_qu_x_weighed: -9.39
+Inner Step: 1400, loss: 10.65, log p(x|A): -6.71, dag: 10.75759833, log p(A)_sp: -0.30, log q(A): -0.056, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0667, log_p_u: -64.3, log_p_u_weighed: -12.9, log_qu_x: -46.2, log_qu_x_weighed: -9.24
+Inner Step: 1500, loss: 10.32, log p(x|A): -6.27, dag: 9.09268938, log p(A)_sp: -0.29, log q(A): -0.055, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.048, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -45.5, log_qu_x_weighed: -9.1
+Inner Step: 1600, loss: 10.36, log p(x|A): -6.18, dag: 10.10415524, log p(A)_sp: -0.30, log q(A): -0.054, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0589, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -45.2, log_qu_x_weighed: -9.04
+Inner Step: 1700, loss: 9.95, log p(x|A): -5.76, dag: 10.02657764, log p(A)_sp: -0.29, log q(A): -0.053, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0617, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -45.4, log_qu_x_weighed: -9.07
+Inner Step: 1800, loss: 9.45, log p(x|A): -5.18, dag: 9.16095643, log p(A)_sp: -0.28, log q(A): -0.052, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0482, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -44.6, log_qu_x_weighed: -8.92
+Inner Step: 1900, loss: 9.19, log p(x|A): -4.68, dag: 10.23728491, log p(A)_sp: -0.29, log q(A): -0.051, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0599, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -43.6, log_qu_x_weighed: -8.72
+Inner Step: 2000, loss: 8.56, log p(x|A): -4.00, dag: 8.90701630, log p(A)_sp: -0.28, log q(A): -0.051, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0458, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -43, log_qu_x_weighed: -8.59
+Inner Step: 2100, loss: 8.58, log p(x|A): -3.89, dag: 9.41380643, log p(A)_sp: -0.28, log q(A): -0.050, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0523, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -42.7, log_qu_x_weighed: -8.53
+Inner Step: 2200, loss: 8.20, log p(x|A): -3.51, dag: 9.15053536, log p(A)_sp: -0.28, log q(A): -0.049, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0468, log_p_u: -65.1, log_p_u_weighed: -13, log_qu_x: -43, log_qu_x_weighed: -8.6
+Inner Step: 2300, loss: 7.81, log p(x|A): -3.07, dag: 9.41620345, log p(A)_sp: -0.27, log q(A): -0.049, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0502, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -42.2, log_qu_x_weighed: -8.44
+Inner Step: 2400, loss: 6.72, log p(x|A): -1.90, dag: 8.50005903, log p(A)_sp: -0.27, log q(A): -0.048, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0417, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -41.7, log_qu_x_weighed: -8.34
+Inner Step: 2500, loss: 7.09, log p(x|A): -2.13, dag: 8.77371354, log p(A)_sp: -0.27, log q(A): -0.047, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0446, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -41, log_qu_x_weighed: -8.2
+Inner Step: 2600, loss: 6.22, log p(x|A): -1.09, dag: 8.99795161, log p(A)_sp: -0.27, log q(A): -0.047, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0483, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -40.3, log_qu_x_weighed: -8.05
+Inner Step: 2700, loss: 6.40, log p(x|A): -1.19, dag: 8.58686405, log p(A)_sp: -0.27, log q(A): -0.046, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0429, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -39.9, log_qu_x_weighed: -7.99
+Inner Step: 2800, loss: 7.10, log p(x|A): -1.84, dag: 8.39103506, log p(A)_sp: -0.26, log q(A): -0.046, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0402, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -39.9, log_qu_x_weighed: -7.98
+Inner Step: 2900, loss: 4.94, log p(x|A): 0.27, dag: 8.22164174, log p(A)_sp: -0.26, log q(A): -0.045, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0379, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -40.1, log_qu_x_weighed: -8.01
+Inner Step: 3000, loss: 6.01, log p(x|A): -0.81, dag: 7.69197219, log p(A)_sp: -0.26, log q(A): -0.045, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0338, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -40, log_qu_x_weighed: -7.99
+Inner Step: 3100, loss: 5.85, log p(x|A): -0.59, dag: 7.86999916, log p(A)_sp: -0.26, log q(A): -0.044, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0349, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -39.7, log_qu_x_weighed: -7.94
+Inner Step: 3200, loss: 5.89, log p(x|A): -0.59, dag: 8.17179010, log p(A)_sp: -0.26, log q(A): -0.044, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0383, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -39.6, log_qu_x_weighed: -7.92
+Inner Step: 3300, loss: 4.74, log p(x|A): 0.52, dag: 8.20115245, log p(A)_sp: -0.26, log q(A): -0.043, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0398, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -39.4, log_qu_x_weighed: -7.88
+Inner Step: 3400, loss: 5.26, log p(x|A): 0.19, dag: 8.13114914, log p(A)_sp: -0.26, log q(A): -0.043, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0376, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -38.5, log_qu_x_weighed: -7.7
+Inner Step: 3500, loss: 5.21, log p(x|A): 0.42, dag: 7.23715296, log p(A)_sp: -0.25, log q(A): -0.042, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0301, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -38, log_qu_x_weighed: -7.61
+Inner Step: 3600, loss: 5.02, log p(x|A): 0.52, dag: 7.56554683, log p(A)_sp: -0.25, log q(A): -0.042, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0327, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -38.5, log_qu_x_weighed: -7.7
+Inner Step: 3700, loss: 5.25, log p(x|A): 0.26, dag: 7.24786250, log p(A)_sp: -0.25, log q(A): -0.041, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0308, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -38.5, log_qu_x_weighed: -7.69
+Inner Step: 3800, loss: 3.93, log p(x|A): 1.56, dag: 7.35944123, log p(A)_sp: -0.25, log q(A): -0.041, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0313, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -38.3, log_qu_x_weighed: -7.66
+Inner Step: 3900, loss: 4.81, log p(x|A): 0.73, dag: 6.72259089, log p(A)_sp: -0.24, log q(A): -0.041, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0256, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -38, log_qu_x_weighed: -7.6
+Inner Step: 4000, loss: 4.20, log p(x|A): 1.46, dag: 7.03575371, log p(A)_sp: -0.24, log q(A): -0.040, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0275, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -37.4, log_qu_x_weighed: -7.48
+Inner Step: 4100, loss: 3.35, log p(x|A): 2.33, dag: 7.27000851, log p(A)_sp: -0.24, log q(A): -0.040, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0296, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -37.5, log_qu_x_weighed: -7.5
+Inner Step: 4200, loss: 6.27, log p(x|A): -0.48, dag: 7.27094692, log p(A)_sp: -0.24, log q(A): -0.039, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0302, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -37.2, log_qu_x_weighed: -7.44
+Inner Step: 4300, loss: 5.02, log p(x|A): 0.63, dag: 6.85704399, log p(A)_sp: -0.24, log q(A): -0.039, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0268, log_p_u: -65.1, log_p_u_weighed: -13, log_qu_x: -37.9, log_qu_x_weighed: -7.59
+Inner Step: 4400, loss: 3.11, log p(x|A): 2.51, dag: 7.30188710, log p(A)_sp: -0.24, log q(A): -0.039, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0311, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -37.9, log_qu_x_weighed: -7.58
+Inner Step: 4500, loss: 1.89, log p(x|A): 3.77, dag: 6.50354321, log p(A)_sp: -0.23, log q(A): -0.038, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0248, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -37.5, log_qu_x_weighed: -7.49
+Inner Step: 4600, loss: 3.83, log p(x|A): 1.93, dag: 6.64074053, log p(A)_sp: -0.23, log q(A): -0.038, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0252, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -36.8, log_qu_x_weighed: -7.36
+Inner Step: 4700, loss: 6.14, log p(x|A): -0.14, dag: 6.51137484, log p(A)_sp: -0.23, log q(A): -0.038, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0249, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -35.8, log_qu_x_weighed: -7.17
+Inner Step: 4800, loss: 1.96, log p(x|A): 3.90, dag: 6.49283518, log p(A)_sp: -0.23, log q(A): -0.037, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0239, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -36.6, log_qu_x_weighed: -7.31
+Inner Step: 4900, loss: 4.66, log p(x|A): 1.35, dag: 6.26543448, log p(A)_sp: -0.23, log q(A): -0.037, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0227, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -35.8, log_qu_x_weighed: -7.15
+Inner Step: 5000, loss: 2.39, log p(x|A): 3.60, dag: 6.55682356, log p(A)_sp: -0.23, log q(A): -0.036, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0243, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -36.1, log_qu_x_weighed: -7.23
+Inner Step: 5100, loss: 2.34, log p(x|A): 3.57, dag: 6.13783343, log p(A)_sp: -0.22, log q(A): -0.036, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0222, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -36.1, log_qu_x_weighed: -7.22
+Inner Step: 5200, loss: 2.21, log p(x|A): 3.77, dag: 6.24925300, log p(A)_sp: -0.23, log q(A): -0.036, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.022, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -35.8, log_qu_x_weighed: -7.17
+Inner Step: 5300, loss: 2.88, log p(x|A): 3.09, dag: 6.45817872, log p(A)_sp: -0.23, log q(A): -0.035, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0244, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -35.9, log_qu_x_weighed: -7.18
+Inner Step: 5400, loss: 1.97, log p(x|A): 4.04, dag: 5.63300592, log p(A)_sp: -0.22, log q(A): -0.035, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0188, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -35.5, log_qu_x_weighed: -7.09
+Inner Step: 5500, loss: 2.30, log p(x|A): 3.73, dag: 5.85574891, log p(A)_sp: -0.22, log q(A): -0.035, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0203, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -35.5, log_qu_x_weighed: -7.09
+Inner Step: 5600, loss: 1.53, log p(x|A): 4.68, dag: 5.99477139, log p(A)_sp: -0.22, log q(A): -0.034, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0209, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -34.4, log_qu_x_weighed: -6.88
+Inner Step: 5700, loss: 5.27, log p(x|A): 0.85, dag: 5.62038904, log p(A)_sp: -0.22, log q(A): -0.034, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0183, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -35.2, log_qu_x_weighed: -7.05
+Inner Step: 5800, loss: 0.69, log p(x|A): 5.36, dag: 5.92828340, log p(A)_sp: -0.22, log q(A): -0.033, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0198, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -35.7, log_qu_x_weighed: -7.14
+Inner Step: 5900, loss: 1.39, log p(x|A): 4.71, dag: 5.95435253, log p(A)_sp: -0.22, log q(A): -0.033, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0205, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -35.4, log_qu_x_weighed: -7.07
+Inner Step: 6000, loss: 2.24, log p(x|A): 3.93, dag: 5.64425447, log p(A)_sp: -0.22, log q(A): -0.033, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0179, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -34.7, log_qu_x_weighed: -6.93
+Inner Step: 6100, loss: 3.96, log p(x|A): 2.32, dag: 5.30907457, log p(A)_sp: -0.21, log q(A): -0.033, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0162, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -34.2, log_qu_x_weighed: -6.84
+Inner Step: 6200, loss: 3.81, log p(x|A): 2.48, dag: 5.68558747, log p(A)_sp: -0.21, log q(A): -0.032, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.019, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -34.5, log_qu_x_weighed: -6.9
+Inner Step: 6300, loss: 3.72, log p(x|A): 2.57, dag: 5.62100912, log p(A)_sp: -0.21, log q(A): -0.032, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0181, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -34.6, log_qu_x_weighed: -6.92
+Inner Step: 6400, loss: 1.11, log p(x|A): 5.13, dag: 5.57938361, log p(A)_sp: -0.21, log q(A): -0.032, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0174, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -34.5, log_qu_x_weighed: -6.9
+Inner Step: 6500, loss: 1.63, log p(x|A): 4.60, dag: 5.57756593, log p(A)_sp: -0.21, log q(A): -0.032, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0181, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -34.4, log_qu_x_weighed: -6.87
+Inner Step: 6600, loss: 0.25, log p(x|A): 6.11, dag: 5.11699657, log p(A)_sp: -0.21, log q(A): -0.032, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0145, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -33.8, log_qu_x_weighed: -6.76
+Inner Step: 6700, loss: 1.97, log p(x|A): 4.42, dag: 5.47963378, log p(A)_sp: -0.21, log q(A): -0.031, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0169, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -33.6, log_qu_x_weighed: -6.71
+Inner Step: 6800, loss: 2.38, log p(x|A): 4.02, dag: 5.40421995, log p(A)_sp: -0.21, log q(A): -0.031, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0175, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -33.5, log_qu_x_weighed: -6.7
+Inner Step: 6900, loss: -0.32, log p(x|A): 6.69, dag: 4.85954067, log p(A)_sp: -0.21, log q(A): -0.031, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0141, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -33.7, log_qu_x_weighed: -6.73
+Inner Step: 7000, loss: 2.43, log p(x|A): 3.93, dag: 5.28852994, log p(A)_sp: -0.21, log q(A): -0.031, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0167, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -33.7, log_qu_x_weighed: -6.75
+Inner Step: 7100, loss: -0.44, log p(x|A): 6.85, dag: 4.95953634, log p(A)_sp: -0.21, log q(A): -0.030, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.014, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -33.3, log_qu_x_weighed: -6.66
+Inner Step: 7200, loss: 4.55, log p(x|A): 2.03, dag: 5.15613726, log p(A)_sp: -0.21, log q(A): -0.030, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0152, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -32.8, log_qu_x_weighed: -6.55
+Inner Step: 7300, loss: 3.88, log p(x|A): 2.73, dag: 5.01097804, log p(A)_sp: -0.21, log q(A): -0.030, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0145, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -32.5, log_qu_x_weighed: -6.49
+Inner Step: 7400, loss: -1.07, log p(x|A): 7.49, dag: 4.69846207, log p(A)_sp: -0.20, log q(A): -0.030, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0127, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -33.3, log_qu_x_weighed: -6.66
+Inner Step: 7500, loss: 0.10, log p(x|A): 6.26, dag: 4.85635257, log p(A)_sp: -0.20, log q(A): -0.029, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0143, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -33.5, log_qu_x_weighed: -6.71
+Inner Step: 7600, loss: -0.52, log p(x|A): 6.96, dag: 5.08416585, log p(A)_sp: -0.20, log q(A): -0.029, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0153, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -33.2, log_qu_x_weighed: -6.63
+Inner Step: 7700, loss: 0.25, log p(x|A): 6.32, dag: 4.76790490, log p(A)_sp: -0.20, log q(A): -0.029, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0132, log_p_u: -64.4, log_p_u_weighed: -12.9, log_qu_x: -32.5, log_qu_x_weighed: -6.5
+Inner Step: 7800, loss: -0.47, log p(x|A): 7.03, dag: 4.55454836, log p(A)_sp: -0.20, log q(A): -0.029, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0121, log_p_u: -64.5, log_p_u_weighed: -12.9, log_qu_x: -32.7, log_qu_x_weighed: -6.54
+Inner Step: 7900, loss: 1.94, log p(x|A): 4.59, dag: 4.81367559, log p(A)_sp: -0.20, log q(A): -0.028, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0133, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -33, log_qu_x_weighed: -6.6
+Inner Step: 8000, loss: 2.01, log p(x|A): 4.51, dag: 4.49206715, log p(A)_sp: -0.20, log q(A): -0.028, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0117, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -33.2, log_qu_x_weighed: -6.65
+Inner Step: 8100, loss: 0.80, log p(x|A): 5.72, dag: 4.62184961, log p(A)_sp: -0.20, log q(A): -0.028, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0125, log_p_u: -65, log_p_u_weighed: -13, log_qu_x: -33.3, log_qu_x_weighed: -6.67
+Inner Step: 8200, loss: 0.72, log p(x|A): 5.80, dag: 4.47552893, log p(A)_sp: -0.20, log q(A): -0.028, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0117, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -33.3, log_qu_x_weighed: -6.65
+Inner Step: 8300, loss: 0.21, log p(x|A): 6.31, dag: 4.81718256, log p(A)_sp: -0.20, log q(A): -0.027, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0132, log_p_u: -64.9, log_p_u_weighed: -13, log_qu_x: -33.2, log_qu_x_weighed: -6.64
+Inner Step: 8400, loss: 2.27, log p(x|A): 4.25, dag: 4.58605163, log p(A)_sp: -0.20, log q(A): -0.027, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.012, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -33, log_qu_x_weighed: -6.61
+Inner Step: 8500, loss: 0.60, log p(x|A): 6.00, dag: 4.39124215, log p(A)_sp: -0.20, log q(A): -0.027, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.011, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -32.7, log_qu_x_weighed: -6.55
+Inner Step: 8600, loss: -2.14, log p(x|A): 8.70, dag: 4.13321131, log p(A)_sp: -0.20, log q(A): -0.027, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0102, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -32.8, log_qu_x_weighed: -6.56
+Inner Step: 8700, loss: -2.52, log p(x|A): 9.12, dag: 4.25270077, log p(A)_sp: -0.20, log q(A): -0.026, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0106, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -32.6, log_qu_x_weighed: -6.52
+Inner Step: 8800, loss: 1.45, log p(x|A): 5.40, dag: 4.52515119, log p(A)_sp: -0.20, log q(A): -0.026, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0119, log_p_u: -64.3, log_p_u_weighed: -12.9, log_qu_x: -30.9, log_qu_x_weighed: -6.19
+Inner Step: 8900, loss: 1.19, log p(x|A): 5.67, dag: 4.32032041, log p(A)_sp: -0.20, log q(A): -0.026, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0108, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -31.2, log_qu_x_weighed: -6.25
+Inner Step: 9000, loss: -1.31, log p(x|A): 8.26, dag: 4.47407584, log p(A)_sp: -0.19, log q(A): -0.026, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0119, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -30.7, log_qu_x_weighed: -6.15
+Inner Step: 9100, loss: 2.59, log p(x|A): 4.30, dag: 4.25861560, log p(A)_sp: -0.19, log q(A): -0.026, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0102, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -31.2, log_qu_x_weighed: -6.25
+Inner Step: 9200, loss: 0.09, log p(x|A): 6.64, dag: 4.37140865, log p(A)_sp: -0.20, log q(A): -0.025, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0112, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -31.9, log_qu_x_weighed: -6.38
+Inner Step: 9300, loss: 0.18, log p(x|A): 6.61, dag: 4.48585328, log p(A)_sp: -0.20, log q(A): -0.025, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0117, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -31.6, log_qu_x_weighed: -6.33
+Inner Step: 9400, loss: -1.83, log p(x|A): 8.69, dag: 4.32139224, log p(A)_sp: -0.19, log q(A): -0.025, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0106, log_p_u: -64.8, log_p_u_weighed: -13, log_qu_x: -31.4, log_qu_x_weighed: -6.28
+Inner Step: 9500, loss: -2.34, log p(x|A): 9.15, dag: 4.00818348, log p(A)_sp: -0.19, log q(A): -0.025, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.00919, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -31.5, log_qu_x_weighed: -6.3
+Inner Step: 9600, loss: 0.83, log p(x|A): 5.99, dag: 4.23377401, log p(A)_sp: -0.20, log q(A): -0.024, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0103, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -31.4, log_qu_x_weighed: -6.29
+Inner Step: 9700, loss: 1.14, log p(x|A): 5.79, dag: 4.43849026, log p(A)_sp: -0.19, log q(A): -0.024, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0115, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -30.9, log_qu_x_weighed: -6.18
+Inner Step: 9800, loss: 1.19, log p(x|A): 5.75, dag: 4.15718825, log p(A)_sp: -0.19, log q(A): -0.024, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.01, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -30.9, log_qu_x_weighed: -6.17
+Inner Step: 9900, loss: -0.53, log p(x|A): 7.42, dag: 4.44997557, log p(A)_sp: -0.19, log q(A): -0.024, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.0114, log_p_u: -64.7, log_p_u_weighed: -12.9, log_qu_x: -31.1, log_qu_x_weighed: -6.22
+Inner Step: 10000, loss: -0.20, log p(x|A): 7.05, dag: 4.19912532, log p(A)_sp: -0.19, log q(A): -0.023, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.00987, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -31.3, log_qu_x_weighed: -6.25
+Inner Step: 10000, loss: -0.20, log p(x|A): 7.05, dag: 4.19912532, log p(A)_sp: -0.19, log q(A): -0.023, H filled: 0.000, rec: 0.000, penalty_dag_weighed: 0.00987, log_p_u: -64.6, log_p_u_weighed: -12.9, log_qu_x: -31.3, log_qu_x_weighed: -6.25
+Best model found at innner step 9516, with Loss -3.52
+Dag penalty after inner: 6.7303713483
+Time taken for this step 123.03499412536621
+Unrounded directed matrix:
+[[[0.00000000e+00 2.51033574e-01 2.13146303e-02 8.80399704e-01
+   3.05708081e-01 4.59055882e-03 8.52823019e-01 2.14907737e-03
+   5.81897842e-03 1.21096782e-02]
+  [6.58301637e-02 0.00000000e+00 3.81080300e-01 2.31118612e-02
+   4.76484187e-02 2.90529653e-02 6.96187317e-01 7.05330167e-04
+   3.61240213e-03 2.71305684e-02]
+  [1.01544783e-02 9.58079938e-03 0.00000000e+00 2.36831186e-03
+   2.38596015e-02 9.60271597e-01 3.80474739e-02 9.22394358e-03
+   3.19142677e-02 3.17343511e-02]
+  [2.48598540e-03 1.08429678e-02 6.17438974e-03 0.00000000e+00
+   1.92736853e-02 2.53454056e-02 1.11385947e-02 1.76672321e-02
+   3.22932913e-03 1.59611199e-02]
+  [3.90594676e-02 3.63797098e-02 1.22150153e-01 6.08574487e-02
+   0.00000000e+00 1.82797275e-02 1.30307108e-01 8.35379586e-03
+   1.49952853e-02 9.95743554e-03]
+  [8.26172769e-01 2.23390814e-02 3.21781263e-02 7.32237287e-03
+   1.23228982e-01 0.00000000e+00 7.45971560e-01 3.15744284e-04
+   1.54089910e-04 8.42177030e-03]
+  [5.22833318e-02 1.30722225e-02 1.59604531e-02 8.38607177e-03
+   7.12394938e-02 2.37192810e-01 0.00000000e+00 1.99685944e-03
+   6.87638000e-02 4.56223032e-03]
+  [9.14615244e-02 8.13928545e-01 6.50743693e-02 3.43935713e-02
+   3.04350201e-02 9.88920271e-01 1.45263067e-02 0.00000000e+00
+   6.65332610e-03 1.10395756e-02]
+  [1.96826225e-03 8.25726926e-01 4.09616390e-03 1.39385881e-03
+   2.53701187e-03 9.72859085e-01 9.24789488e-01 1.86070811e-03
+   0.00000000e+00 5.21212630e-03]
+  [1.56898685e-02 5.23417182e-02 6.29622713e-02 8.33315700e-02
+   9.12332773e-01 1.96895659e-01 1.90720856e-01 1.79981207e-03
+   3.89315141e-03 0.00000000e+00]]]
+Unrounded bidirected matrix:
+[[[0.         0.17160571 0.08429416 0.00976407 0.01906478 0.99638224
+   0.07604951 0.04795646 0.04091026 0.99608505]
+  [0.17160571 0.         0.99565268 0.11250086 0.11936952 0.99669147
+   0.99466324 0.19424219 0.01099805 0.01822321]
+  [0.08429416 0.99565268 0.         0.99774444 0.03911561 0.00884227
+   0.03152009 0.08670146 0.94696778 0.03027218]
+  [0.00976407 0.11250086 0.99774444 0.         0.02816635 0.05685528
+   0.21744254 0.03026607 0.99796271 0.02630302]
+  [0.01906478 0.11936952 0.03911561 0.02816635 0.         0.01931331
+   0.06572554 0.06119058 0.17010972 0.99573517]
+  [0.99638224 0.99669147 0.00884227 0.05685528 0.01931331 0.
+   0.00897961 0.00983241 0.0533237  0.03755063]
+  [0.07604951 0.99466324 0.03152009 0.21744254 0.06572554 0.00897961
+   0.         0.99658644 0.01004665 0.11341606]
+  [0.04795646 0.19424219 0.08670146 0.03026607 0.06119058 0.00983241
+   0.99658644 0.         0.12304098 0.08249757]
+  [0.04091026 0.01099805 0.94696778 0.99796271 0.17010972 0.0533237
+   0.01004665 0.12304098 0.         0.04858624]
+  [0.99608505 0.01822321 0.03027218 0.02630302 0.99573517 0.03755063
+   0.11341606 0.08249757 0.04858624 0.        ]]]
+Not done inner optimization.
+Saved new best checkpoint with 0.6514557600021362 instead of -inf
+Traceback (most recent call last):
+  File "/opt/conda/envs/causica/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/causica/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/causica/causica/run_experiment.py", line 302, in <module>
+    main(sys.argv[1:])
+  File "/root/causica/causica/run_experiment.py", line 298, in main
+    run_experiment_on_parsed_args(args, run_context=run_context)
+  File "/root/causica/causica/run_experiment.py", line 254, in run_experiment_on_parsed_args
+    run_experiment(
+  File "/root/causica/causica/run_experiment.py", line 195, in run_experiment
+    kwargs_file = run_context.aml_step(
+  File "/root/causica/causica/run_experiment.py", line 196, in <lambda>
+    (lambda **kwargs: run_single_seed_experiment(ExperimentArguments(**kwargs))),
+  File "/root/causica/causica/experiment/run_single_seed_experiment.py", line 143, in run_single_seed_experiment
+    model = run_train_main(
+  File "/root/causica/causica/experiment/steps/train_step.py", line 47, in run_train_main
+    model.run_train(dataset=dataset, train_config_dict=train_hypers)  # type: ignore
+  File "/root/causica/causica/models/deci/deci.py", line 1647, in run_train
+    base_idx = _log_epoch_metrics(writer, tracker_loss_terms, adj_metrics, step, outer_step_time, base_idx)
+UnboundLocalError: local variable 'adj_metrics' referenced before assignment

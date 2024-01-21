@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional, Tuple
-
+import os
+import logging
 import numpy as np
 import torch
 import torch.distributions as td
@@ -502,6 +503,27 @@ class VarDistA_ENCO_ADMG(VarDistA_ENCO):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.params_bidirected = self._initialize_bidirected_params()
+        self.logger = logging.getLogger()
+
+        use_skeleton_posterior = os.environ.get("USE_SKELETON_POSTERIOR") == "True"
+        skeleton_posterior_path = os.environ.get("SKELETON_POSTERIOR_PATH")
+
+        if use_skeleton_posterior:
+            if skeleton_posterior_path is None:
+                raise ValueError("SKELETON_POSTERIOR_PATH not set when USE_SKELETON_POSTERIOR is True.")
+            
+            self.revise_invoke_count = 0
+
+            self.last_params_bidirected = self.params_bidirected.data.detach().clone()
+            self.last_logits_edges = self.logits_edges.data.detach().clone()
+            
+            skl_np = np.loadtxt(skeleton_posterior_path)
+            skl_penalty = skl_np + .1
+            self.skl_penalty = torch.from_numpy(skl_penalty).to(self.device)
+
+            self.use_skeleton_posterior = use_skeleton_posterior
+            self.logger.info(f"Loaded skeleton posterior from {skeleton_posterior_path}")
+            self.logger.info(f"Shape of skeleton posterior: {self.skl_penalty.shape}")
 
     def _initialize_bidirected_params(self) -> torch.Tensor:
         """Initialises logits that characterise bidirectional edges between observed variables."""
@@ -547,6 +569,47 @@ class VarDistA_ENCO_ADMG(VarDistA_ENCO):
         logits_bernoulli_1 -= 1e10 * torch.eye(self.input_dim, device=self.device)
         dist = td.Independent(td.Bernoulli(logits=logits_bernoulli_1), 2)
         return dist
+
+    def revise_update(
+        self,
+        auglan_step: int,
+    ) -> None:
+        directional_mask_bidirected = self.params_bidirected < self.last_params_bidirected
+        directional_mask_logits = self.logits_edges < self.last_logits_edges
+        
+        skl_mask = torch.pow(self.skl_penalty, 1 / (auglan_step + 2)) > torch.rand_like(self.skl_penalty)
+        
+        params_bidirected_accept_mask = (directional_mask_bidirected | skl_mask)
+        
+        skl_mask_expanded = skl_mask.unsqueeze(0).expand_as(self.logits_edges)
+        params_logit_edges_accept_mask = (directional_mask_logits | skl_mask_expanded)
+
+        # Apply conditional updates without in-place operations
+        self.params_bidirected.data = torch.where(
+            params_bidirected_accept_mask,
+            self.params_bidirected.data,
+            self.last_params_bidirected.data
+        )
+        self.logits_edges.data = torch.where(
+            params_logit_edges_accept_mask,
+            self.logits_edges.data ,
+            self.last_logits_edges.data 
+        )
+
+        if self.revise_invoke_count % 500 == 0:
+            print(
+                (
+                    f"auglan_step: {auglan_step}, \n"
+                    f"params_bidirected_accept_mask: {params_bidirected_accept_mask.sum().cpu().item()}, \n"
+                    f"total_params_bidirected: {self.params_bidirected.numel()}, \n"
+                    f"params_logit_edges_accept_mask: {params_logit_edges_accept_mask.sum().cpu().item()}, \n"
+                    f"total_params_logit_edges: {self.logits_edges.numel()}"
+                )
+            )
+        self.revise_invoke_count += 1
+        
+        self.last_params_bidirected = self.params_bidirected.data.detach().clone()
+        self.last_logits_edges = self.logits_edges.data.detach().clone()
 
     def sample_A(self) -> torch.Tensor:
         """Samples the directed and bidirected matrix from the variational distribution and returns the corresponding

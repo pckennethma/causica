@@ -43,4 +43,5 @@ def convert_data(dir_name):
     )
 
 if __name__ == "__main__":
-    convert_data(sys.argv[1])
+    for i in range(10):
+        convert_data(f"data/10_{i}")

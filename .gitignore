@@ -32,4 +32,5 @@ research_experiments/context_bayes/plots
 # Workaround for git to keep empty data/ directory around 
 !/data/.keep
 research_experiments/**/*.ipynb
-*.log
+log/*
+adj_mat/*

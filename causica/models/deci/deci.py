@@ -55,6 +55,7 @@ from .variational_distributions import (
     DeterministicAdjacency,
     ThreeWayGraphDist,
     VarDistA_ENCO,
+    VarDistA_ENCO_ADMG,
     VarDistA_Simple,
 )
 
@@ -1760,7 +1761,13 @@ class DECI(
                     break
                 elif inner_step >= train_config_dict["max_auglag_inner_epochs"]:
                     break
-
+            
+            if isinstance(
+                    self.var_dist_A, VarDistA_ENCO_ADMG
+                ):
+                if self.var_dist_A.use_skeleton_posterior:
+                    self.var_dist_A.revise_update(step)
+                    
             # Save if loss improved
             if np.isnan(best_loss) or np.mean(tracker_loss_terms["loss"][-10:]) < best_loss:
                 best_loss = np.mean(tracker_loss_terms["loss"][-10:])
