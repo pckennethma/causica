@@ -43,5 +43,6 @@ def convert_data(dir_name):
     )
 
 if __name__ == "__main__":
-    for i in range(10):
-        convert_data(f"data/10_{i}")
+    convert_data("data/test-n-admg")
+    # for i in range(10):
+    #     convert_data(f"data/10_{i}")

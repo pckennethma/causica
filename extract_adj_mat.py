@@ -1,6 +1,6 @@
 import os
 
-output_dir = "adj_mat"
+output_dir = "sp_adj_mat"
 os.makedirs(output_dir, exist_ok=True)
 
 for sub_dir in os.listdir("runs"):
@@ -17,7 +17,9 @@ for sub_dir in os.listdir("runs"):
                 if os.path.exists(directed_adj_mat_path) and os.path.exists(bidirected_adj_mat_path) and os.path.exists(dataset_name_path):
                     with open(dataset_name_path, "r") as f:
                         dataset_name = f.read().strip()
-                    directed_output_path = os.path.join(output_dir, f"{dataset_name}_D.npy")
-                    bidirected_output_path = os.path.join(output_dir, f"{dataset_name}_B.npy")
+                    if "test-n-admg" not in dataset_name:
+                        continue
+                    directed_output_path = os.path.join(output_dir, f"{dataset_name}_D_sp.npy")
+                    bidirected_output_path = os.path.join(output_dir, f"{dataset_name}_B_sp.npy")
                     os.system("cp {} {}".format(directed_adj_mat_path, directed_output_path))
                     os.system("cp {} {}".format(bidirected_adj_mat_path, bidirected_output_path))

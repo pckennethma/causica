@@ -507,7 +507,7 @@ class VarDistA_ENCO_ADMG(VarDistA_ENCO):
 
         use_skeleton_posterior = os.environ.get("USE_SKELETON_POSTERIOR") == "True"
         skeleton_posterior_path = os.environ.get("SKELETON_POSTERIOR_PATH")
-
+        self.use_skeleton_posterior = use_skeleton_posterior
         if use_skeleton_posterior:
             if skeleton_posterior_path is None:
                 raise ValueError("SKELETON_POSTERIOR_PATH not set when USE_SKELETON_POSTERIOR is True.")
@@ -520,8 +520,7 @@ class VarDistA_ENCO_ADMG(VarDistA_ENCO):
             skl_np = np.loadtxt(skeleton_posterior_path)
             skl_penalty = skl_np + .1
             self.skl_penalty = torch.from_numpy(skl_penalty).to(self.device)
-
-            self.use_skeleton_posterior = use_skeleton_posterior
+            
             self.logger.info(f"Loaded skeleton posterior from {skeleton_posterior_path}")
             self.logger.info(f"Shape of skeleton posterior: {self.skl_penalty.shape}")
 

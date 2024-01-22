@@ -1764,9 +1764,10 @@ class DECI(
             
             if isinstance(
                     self.var_dist_A, VarDistA_ENCO_ADMG
-                ):
+                ) and hasattr(self.var_dist_A, "use_skeleton_posterior"):
                 if self.var_dist_A.use_skeleton_posterior:
                     self.var_dist_A.revise_update(step)
+                    self.opt.zero_grad()
                     
             # Save if loss improved
             if np.isnan(best_loss) or np.mean(tracker_loss_terms["loss"][-10:]) < best_loss:

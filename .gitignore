@@ -33,4 +33,7 @@ research_experiments/context_bayes/plots
 !/data/.keep
 research_experiments/**/*.ipynb
 log/*
-adj_mat/*
+*dj_mat/*
+runs_backup/
+skl_posterior/
+adj_mat/
